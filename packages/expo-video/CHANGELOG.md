@@ -8,8 +8,6 @@
 
 ### 🐛 Bug fixes
 
-- [ios] Fix broken bounds when cropping images.
-
 ### 💡 Others
 
 ## 56.1.0 — 2026-05-06
