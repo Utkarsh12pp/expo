@@ -6,6 +6,7 @@
 
 ### 🎉 New features
 
+- Add filtering by `isFavorite` to `Query` ([#45769](https://github.com/expo/expo/pull/45769) by [@Wenszel](https://github.com/Wenszel))
 - [android] Add `getFavorite()`/`setFavorite()` ([#45768](https://github.com/expo/expo/pull/45768) by [@Wenszel](https://github.com/Wenszel))
 
 ### 🐛 Bug fixes
