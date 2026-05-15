@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.resolveModuleAsync = resolveModuleAsync;
 exports.resolveExtraBuildDependenciesAsync = resolveExtraBuildDependenciesAsync;
 const path_1 = __importDefault(require("path"));
+const utils_1 = require("../utils");
 async function resolveModuleAsync(packageName, revision) {
     const devtoolsConfig = revision.config?.toJSON().devtools;
     if (devtoolsConfig == null) {
@@ -14,11 +15,16 @@ async function resolveModuleAsync(packageName, revision) {
     return {
         packageName,
         packageRoot: revision.path,
-        webpageRoot: devtoolsConfig.webpageRoot
-            ? path_1.default.join(revision.path, devtoolsConfig.webpageRoot)
-            : undefined,
+        webpageRoot: resolveWebpageRoot(revision.path, devtoolsConfig.webpageRoot),
         cliExtensions: devtoolsConfig.cliExtensions,
     };
+}
+function resolveWebpageRoot(packageRoot, configured) {
+    if (!configured) {
+        return undefined;
+    }
+    const joined = path_1.default.join(packageRoot, configured);
+    return (0, utils_1.isPathInside)(joined, packageRoot) ? joined : undefined;
 }
 async function resolveExtraBuildDependenciesAsync(_projectNativeRoot) {
     return null;
