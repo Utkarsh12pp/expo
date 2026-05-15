@@ -8,6 +8,8 @@
 
 ### 🐛 Bug fixes
 
+- Fix missing await on bundle/assets output copies in `export:embed` ([#45883](https://github.com/expo/expo/pull/45883) by [@kitten](https://github.com/kitten))
+
 ### 💡 Others
 
 ## 56.1.5 — 2026-05-15
