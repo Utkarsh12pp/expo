@@ -8,6 +8,8 @@
 
 ### 🐛 Bug fixes
 
+- Limit payload sizes and recorded entries for network debugger CDP state ([#45864](https://github.com/expo/expo/pull/45864) by [@kitten](https://github.com/kitten))
+
 ### 💡 Others
 
 ## 56.1.5 — 2026-05-15
