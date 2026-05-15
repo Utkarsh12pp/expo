@@ -8,6 +8,8 @@
 
 ### 🐛 Bug fixes
 
+- Persist `~/.expo/state.json` with owner-only file permissions ([#45873](https://github.com/expo/expo/pull/45873) by [@kitten](https://github.com/kitten))
+
 ### 💡 Others
 
 ## 56.1.5 — 2026-05-15
