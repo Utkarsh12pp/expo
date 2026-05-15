@@ -109,6 +109,41 @@ You can browse available symbols in Apple's SF Symbols app.
 
 > **info** SF Symbols are an iOS-only feature.
 
+### Material Symbols (Android only)
+
+The easiest way to add icons on Android is to use [Material Symbols](https://fonts.google.com/icons) via the [`@expo/material-symbols`](https://github.com/expo/expo/tree/main/packages/material-symbols) package, which ships pre-built XML vector drawables. Pass the imported drawable directly to the `icon` prop:
+
+```tsx
+<Stack.Toolbar.Button icon={require('@expo/material-symbols/star.xml')} onPress={() => {}} />
+<Stack.Toolbar.Button icon={require('@expo/material-symbols/share.xml')} onPress={() => {}} />
+<Stack.Toolbar.Menu icon={require('@expo/material-symbols/more_vert.xml')}>{/* ... */}</Stack.Toolbar.Menu>
+```
+
+Install it with:
+
+```sh
+npx expo install @expo/material-symbols
+```
+
+Vector drawables are tinted with the toolbar's tint color by default. Pass `iconRenderingMode="original"` to preserve the source colors.
+
+> **info** Material Symbols XML drawables are an Android-only feature. On iOS, use SF Symbols instead.
+
+#### Using the same icon on Android and iOS
+
+`Stack.Toolbar.Button`'s `icon` prop accepts both an SF Symbol name (iOS) and an `ImageSourcePropType` (Android), so a `process.env.EXPO_OS` check covers both platforms from a single component. Metro replaces the value at build time and removes the unused branch, so the other platform's asset never ships:
+
+```tsx
+<Stack.Toolbar.Button
+  icon={
+    process.env.EXPO_OS === 'ios'
+      ? 'star.fill'
+      : require('@expo/material-symbols/star.xml')
+  }
+  onPress={() => {}}
+/>
+```
+
 ### Custom images
 
 You can also use custom images. The API for passing them differs by platform:
@@ -711,7 +746,7 @@ export default function Home() {
 
 </Collapsible>
 
-<Collapsible summary="Custom icons are the only supported icon type on Android">
+<Collapsible summary="Android icons must be image sources">
 
 On Android, `icon` must be an `ImageSourcePropType`. For example `require('./icon.png')` or `{ uri: '...' }`.
 
