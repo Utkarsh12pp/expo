@@ -8,6 +8,8 @@
 
 ### 🐛 Bug fixes
 
+- Replace inaccurate file-in-root checks with utility ([#45856](https://github.com/expo/expo/pull/45856) by [@kitten](https://github.com/kitten))
+
 ### 💡 Others
 
 ## 56.1.5 — 2026-05-15
