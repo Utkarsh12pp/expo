@@ -6,6 +6,8 @@
 
 ### 🎉 New features
 
+- Add `EXPO_ROUTER_DISABLE_NATIVE_TABS_MD` environment variable that tree-shakes `expo-symbols` from the Android bundle by swapping the NativeTabs Material Symbols icon converter for a no-op stub. ([#45857](https://github.com/expo/expo/pull/45857) by [@Ubax](https://github.com/Ubax))
+
 ### 🐛 Bug fixes
 
 ### 💡 Others
