@@ -8,6 +8,8 @@
 
 ### 🐛 Bug fixes
 
+- Always use HTTP POST when invoking RSC server actions ([#45905](https://github.com/expo/expo/pull/45905) by [@kitten](https://github.com/kitten))
+
 ### 💡 Others
 
 ## 56.2.1 — 2026-05-15

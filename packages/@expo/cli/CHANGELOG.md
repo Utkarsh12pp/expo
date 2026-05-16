@@ -8,6 +8,8 @@
 
 ### 🐛 Bug fixes
 
+- Forward the request HTTP method to the RSC renderer ([#45905](https://github.com/expo/expo/pull/45905) by [@kitten](https://github.com/kitten))
+
 ### 💡 Others
 
 ## 56.1.5 — 2026-05-15
