@@ -540,6 +540,7 @@ export function createServerComponentsMiddleware(
         context,
         config: {},
         input,
+        method,
         contentType,
       },
       {
