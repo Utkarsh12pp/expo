@@ -8,6 +8,8 @@
 
 ### 🐛 Bug fixes
 
+- Fix RSC falling through on lookup causing unexpected errors ([#45895](https://github.com/expo/expo/pull/45895) by [@kitten](https://github.com/kitten))
+
 ### 💡 Others
 
 ## 56.0.8 — 2026-05-13
