@@ -10,6 +10,8 @@
 
 ### 💡 Others
 
+- [Internal] Remove RSC render context and remove render store global ([#45908](https://github.com/expo/expo/pull/45908) by [@kitten](https://github.com/kitten))
+
 ## 56.0.8 — 2026-05-13
 
 _This version does not introduce any user-facing changes._
